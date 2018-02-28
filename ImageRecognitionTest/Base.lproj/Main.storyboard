@@ -19,20 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mBG-0m-mrU">
-                                <rect key="frame" x="16" y="20" width="343" height="128"/>
+                                <rect key="frame" x="16" y="20" width="343" height="207"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="aFR-ou-UtQ"/>
+                                    <constraint firstAttribute="height" constant="207" id="aFR-ou-UtQ"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PV4-TQ-sJd">
-                                <rect key="frame" x="16" y="172" width="343" height="85"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="85" id="zaW-AM-CC5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYV-iG-L7m">
                                 <rect key="frame" x="146" y="328.5" width="83" height="30"/>
                                 <constraints>
@@ -44,11 +35,20 @@
                                     <action selector="presentPicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3If-uf-Dpl"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PV4-TQ-sJd">
+                                <rect key="frame" x="16" y="235" width="343" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="zaW-AM-CC5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="aYV-iG-L7m" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="AcO-rF-RWR"/>
-                            <constraint firstItem="PV4-TQ-sJd" firstAttribute="top" secondItem="mBG-0m-mrU" secondAttribute="bottom" constant="24" id="Cr1-DN-5eV"/>
+                            <constraint firstItem="PV4-TQ-sJd" firstAttribute="top" secondItem="mBG-0m-mrU" secondAttribute="bottom" constant="8" id="Cr1-DN-5eV"/>
                             <constraint firstItem="mBG-0m-mrU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="N7u-No-InJ"/>
                             <constraint firstItem="aYV-iG-L7m" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="W3c-pl-0IZ"/>
                             <constraint firstItem="PV4-TQ-sJd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="guN-ng-qPm"/>
