@@ -14,6 +14,8 @@
 		5A334B0120473B58000AE607 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A334AFF20473B58000AE607 /* LaunchScreen.storyboard */; };
 		5A334B0C20473B58000AE607 /* ImageRecognitionTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A334B0B20473B58000AE607 /* ImageRecognitionTestTests.swift */; };
 		5A334B1720473B58000AE607 /* ImageRecognitionTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A334B1620473B58000AE607 /* ImageRecognitionTestUITests.swift */; };
+		5A334B2620473D44000AE607 /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5A334B2520473D44000AE607 /* MobileNet.mlmodel */; };
+		5A334B2A20473E0C000AE607 /* ImageToPixelBufferConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A334B2920473E0C000AE607 /* ImageToPixelBufferConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		5A334B1220473B58000AE607 /* ImageRecognitionTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageRecognitionTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A334B1620473B58000AE607 /* ImageRecognitionTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRecognitionTestUITests.swift; sourceTree = "<group>"; };
 		5A334B1820473B58000AE607 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A334B2520473D44000AE607 /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
+		5A334B2920473E0C000AE607 /* ImageToPixelBufferConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageToPixelBufferConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +101,10 @@
 		5A334AF520473B58000AE607 /* ImageRecognitionTest */ = {
 			isa = PBXGroup;
 			children = (
-				5A334AF620473B58000AE607 /* AppDelegate.swift */,
 				5A334AF820473B58000AE607 /* ViewController.swift */,
+				5A334B2820473E00000AE607 /* Converters */,
+				5A334B2420473D28000AE607 /* MLModels */,
+				5A334AF620473B58000AE607 /* AppDelegate.swift */,
 				5A334AFA20473B58000AE607 /* Main.storyboard */,
 				5A334AFD20473B58000AE607 /* Assets.xcassets */,
 				5A334AFF20473B58000AE607 /* LaunchScreen.storyboard */,
@@ -123,6 +129,22 @@
 				5A334B1820473B58000AE607 /* Info.plist */,
 			);
 			path = ImageRecognitionTestUITests;
+			sourceTree = "<group>";
+		};
+		5A334B2420473D28000AE607 /* MLModels */ = {
+			isa = PBXGroup;
+			children = (
+				5A334B2520473D44000AE607 /* MobileNet.mlmodel */,
+			);
+			path = MLModels;
+			sourceTree = "<group>";
+		};
+		5A334B2820473E00000AE607 /* Converters */ = {
+			isa = PBXGroup;
+			children = (
+				5A334B2920473E0C000AE607 /* ImageToPixelBufferConverter.swift */,
+			);
+			path = Converters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +283,8 @@
 			files = (
 				5A334AF920473B58000AE607 /* ViewController.swift in Sources */,
 				5A334AF720473B58000AE607 /* AppDelegate.swift in Sources */,
+				5A334B2A20473E0C000AE607 /* ImageToPixelBufferConverter.swift in Sources */,
+				5A334B2620473D44000AE607 /* MobileNet.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
