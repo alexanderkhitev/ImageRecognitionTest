@@ -14,7 +14,7 @@ class ImageToPixelBufferConverter {
     static func convertToPixelBuffer(image: UIImage) -> CVPixelBuffer? {
         
         // resize image
-        let newSize = CGSize(width: 224, height: 224)
+        let newSize = CGSize(width: 299, height: 299)
         UIGraphicsBeginImageContext(newSize)
         image.draw(in: CGRect(origin: CGPoint.zero, size: newSize))
         

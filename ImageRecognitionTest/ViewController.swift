@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     // MARK: - ML
     
     private let mobileNet = MobileNet()
+    private let food101Net = Food101Net()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,34 +32,41 @@ class ViewController: UIViewController {
     @IBAction private func presentPicker(_ button: UIButton) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        let number = Int(arc4random_uniform(6))
-        if number % 2 == 0 {
+//        let number = Int(arc4random_uniform(6))
+//        if number % 2 == 0 {
             imagePicker.sourceType = .photoLibrary
-        } else {
-            imagePicker.sourceType = .camera
-        }
+//        } else {
+//            imagePicker.sourceType = .camera
+//        }
         present(imagePicker, animated: true, completion: nil)
     }
     
     // MARK: - ML functions
     
     private func getImageInfo(_ image: UIImage) {
-        guard let model = try? VNCoreMLModel(for: mobileNet.model) else { return }
-        let request = VNCoreMLRequest(model: model, completionHandler: handleRequest)
-        request.imageCropAndScaleOption = .centerCrop
-        
-        guard let cgImage = image.cgImage else { return }
-        guard let cgImageOrientation = CGImagePropertyOrientation(rawValue: UInt32(image.imageOrientation.rawValue)) else { return }
-        
-        DispatchQueue.global(qos: .userInitiated).async {
-            let handler = VNImageRequestHandler(cgImage: cgImage, orientation: cgImageOrientation)
-            do {
-                try handler.perform([request])
-            } catch {
-                debugPrint(error.localizedDescription)
-            }
+        guard let pixel = ImageToPixelBufferConverter.convertToPixelBuffer(image: image) else { return }
+        do {
+            let prediction = try food101Net.prediction(image: pixel)
+            resultLabel.text = prediction.classLabel
+        } catch {
+            debugPrint(error.localizedDescription)
         }
-
+        
+//        guard let model = try? VNCoreMLModel(for: food101Net.model) else { return }
+//        let request = VNCoreMLRequest(model: model, completionHandler: handleRequest)
+//        request.imageCropAndScaleOption = .centerCrop
+//
+//        guard let cgImage = image.cgImage else { return }
+//        guard let cgImageOrientation = CGImagePropertyOrientation(rawValue: UInt32(image.imageOrientation.rawValue)) else { return }
+//
+//        DispatchQueue.global(qos: .userInitiated).async {
+//            let handler = VNImageRequestHandler(cgImage: cgImage, orientation: cgImageOrientation)
+//            do {
+//                try handler.perform([request])
+//            } catch {
+//                debugPrint(error.localizedDescription)
+//            }
+//        }
     }
 
     private func handleRequest(for request: VNRequest, error: Error?) {
