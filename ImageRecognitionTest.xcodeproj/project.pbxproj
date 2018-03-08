@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A229BEF205168BA002437A1 /* Food101Net.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5A229BEE205168BA002437A1 /* Food101Net.mlmodel */; };
 		5A334AF720473B58000AE607 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A334AF620473B58000AE607 /* AppDelegate.swift */; };
 		5A334AF920473B58000AE607 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A334AF820473B58000AE607 /* ViewController.swift */; };
 		5A334AFC20473B58000AE607 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A334AFA20473B58000AE607 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A229BEE205168BA002437A1 /* Food101Net.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Food101Net.mlmodel; sourceTree = "<group>"; };
 		5A334AF320473B58000AE607 /* ImageRecognitionTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageRecognitionTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A334AF620473B58000AE607 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A334AF820473B58000AE607 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				5A334B2520473D44000AE607 /* MobileNet.mlmodel */,
+				5A229BEE205168BA002437A1 /* Food101Net.mlmodel */,
 			);
 			path = MLModels;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				5A334AF920473B58000AE607 /* ViewController.swift in Sources */,
 				5A334AF720473B58000AE607 /* AppDelegate.swift in Sources */,
 				5A334B2A20473E0C000AE607 /* ImageToPixelBufferConverter.swift in Sources */,
+				5A229BEF205168BA002437A1 /* Food101Net.mlmodel in Sources */,
 				5A334B2620473D44000AE607 /* MobileNet.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
